@@ -1,0 +1,219 @@
+`html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Dinoel da Costa Soares - Portfólio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfólio de Dinoel da Costa Soares — Engenharia de Software, projetos, habilidades e contato.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #23395d;
+      --accent: #3b82f6;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 32px 16px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    }
+    header {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .avatar {
+      width: 120px; height: 120px; border-radius: 50%;
+      border: 3px solid var(--primary); object-fit: cover;
+    }
+    h1 { font-size: 1.8rem; margin: 0; color: var(--primary); }
+    h2 { font-size: 1.2rem; margin: 4px 0 8px; color: var(--muted); font-weight: 600; }
+    .summary { margin-top: 8px; color: var(--text); }
+    .section-title {
+      font-size: 1.3rem; color: var(--primary); margin: 24px 0 12px; font-weight: 700;
+    }
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      background: #fff;
+      margin-bottom: 12px;
+    }
+    .project-title { font-weight: 700; font-size: 1.05rem; }
+    .meta { color: var(--muted); font-size: 0.95rem; }
+    .link {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--accent); text-decoration: none; font-weight: 600;
+      margin-top: 8px;
+    }
+    .grid-2 {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    }
+    table {
+      width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.95rem;
+    }
+    th, td { border: 1px solid var(--border); padding: 10px; }
+    th { background: var(--primary); color: #fff; text-align: left; }
+    ul { padding-left: 18px; }
+    .contact-list { list-style: none; padding: 0; margin: 0; }
+    .contact-list li { margin-bottom: 8px; }
+    .contact-list a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    footer { margin-top: 24px; color: var(--muted); font-size: 0.9rem; }
+
+    / Botões /
+    .actions {
+      display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px;
+    }
+    .btn {
+      background: var(--primary); color: #fff; border: none; border-radius: 10px;
+      padding: 10px 14px; font-weight: 600; cursor: pointer;
+    }
+    .btn.secondary { background: #111827; }
+    .btn:hover { opacity: 0.92; }
+
+    / Responsivo /
+    @media (max-width: 640px) {
+      header { grid-template-columns: 80px 1fr; }
+      .avatar { width: 80px; height: 80px; }
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+
+    / Estilo para impressão (PDF) /
+    @media print {
+      body { background: #fff; padding: 0; }
+      .container { box-shadow: none; border: none; border-radius: 0; }
+      .actions { display: none; }
+      a.link { color: #000; text-decoration: underline; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="https://github.com/dinoeldacostasoares.png" alt="Avatar" class="avatar">
+      <div>
+        <h1>Dinoel da Costa Soares</h1>
+        <h2>Estudante de Engenharia de Software</h2>
+        <p class="summary">
+          Apaixonado por tecnologia, desenvolvimento de sistemas e soluções digitais. Busco aplicar meus conhecimentos
+          para criar ferramentas úteis, seguras e eficientes.
+        </p>
+        <div class="actions">
+          <a class="btn" href="https://github.com/dcsproducer25-collab/MatrixApp" target="_blank">✍️📲 MatrixApp (novo repositório)</a>
+          <button class="btn secondary" onclick="window.print()">Salvar como PDF</button>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="section-title">Projetos</div>
+      <div class="grid-2">
+        <div class="card">
+          <div class="project-title">Sistema de Controle de Vendas</div>
+          <div class="meta">Tecnologias: Python, MySQL</div>
+          <div class="meta">Objetivo: Automatizar processos internos de vendas</div>
+          <a class="link" href="https://github.com/dcsproducer25-collab/MatrixApp" target="_blank">Ver repositório</a>
+        </div>
+        <div class="card">
+          <div class="project-title">Aplicativo de Segurança do Trabalho</div>
+          <div class="meta">Tecnologias: Kotlin, Android Studio</div>
+          <div class="meta">Objetivo: Checklist de EPIs e alertas de risco</div>
+          <div class="meta">Status: Em desenvolvimento</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Formação</div>
+      <div class="card">
+        <ul>
+          <li>
+            <strong>Engenharia de Software – Estácio de Sá (Último semestre)</strong><br>
+            <small>Principais disciplinas: Estrutura de dados, engenharia de requisitos, testes de software</small>
+          </li>
+          <li>
+            <strong>Cursos Complementares</strong>
+            <ul>
+              <li>Estratégia em Vendas (2022)</li>
+              <li>Home Office (2020)</li>
+              <li>Windows 7 a 11 – SESI (2012)</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Habilidades técnicas</div>
+      <div class="card">
+        <table>
+          <tr>
+            <th>Categoria</th><th>Ferramentas / Tecnologias</th>
+          </tr>
+          <tr>
+            <td>Linguagens</td><td>Python, JavaScript, Java, Kotlin</td>
+          </tr>
+          <tr>
+            <td>Banco de Dados</td><td>MySQL, SQLite</td>
+          </tr>
+          <tr>
+            <td>Desenvolvimento Web</td><td>HTML, CSS, React (básico)</td>
+          </tr>
+          <tr>
+            <td>Metodologias Ágeis</td><td>Scrum, Kanban</td>
+          </tr>
+          <tr>
+            <td>Soft Skills</td><td>Liderança, comunicação, estratégia</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+<section>
+  <div class="section-title">Contato</div>
+  <div class="card">
+    <ul class="contact-list">
+      <li>📧 <a href="mailto:dinocsoares@hotmail.com">dinocsoares@hotmail.com</a></li>
+      <li>📱 (67) 99261-0049</li>
+      <li><a href="https://www.linkedin.com/in/dinoel-costa-33031637?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">LinkedIn</a></li>
+      <li><a href="https://github.com/dinoeldacostasoares" target="_blank">GitHub</a></li>
+    </ul>
+  </div>
+</section>
+
+    <footer>
+      Última atualização: <span id="updated"></span>
+    </footer>
+  </div>
+
+  <script>
+    // Atualiza data automaticamente
+    const d = new Date();
+    const fmt = d.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+    document.getElementById('updated').textContent = fmt;
+  </script>
+</body>
+</html>
+`
