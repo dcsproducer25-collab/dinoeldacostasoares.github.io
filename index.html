@@ -17,11 +17,24 @@
       --primary: #23395d;
       --accent: #3b82f6;
       --border: #e5e7eb;
+      --shadow: 0 8px 24px rgba(0,0,0,0.06);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --card: #0b1220;
+        --text: #e5e7eb;
+        --muted: #94a3b8;
+        --primary: #60a5fa;
+        --accent: #93c5fd;
+        --border: #1f2937;
+        --shadow: 0 10px 30px rgba(0,0,0,0.35);
+      }
     }
     * { box-sizing: border-box; }
     body {
       font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: var(--bg);
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(147,197,253,0.12), transparent 40%), var(--bg);
       color: var(--text);
       margin: 0;
       padding: 32px 16px;
@@ -34,8 +47,10 @@
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 28px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      box-shadow: var(--shadow);
+      animation: fadeIn 500ms ease-out;
     }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
     header {
       display: grid;
       grid-template-columns: 120px 1fr;
@@ -46,6 +61,7 @@
     .avatar {
       width: 120px; height: 120px; border-radius: 50%;
       border: 3px solid var(--primary); object-fit: cover;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
     }
     h1 { font-size: 1.8rem; margin: 0; color: var(--primary); }
     h2 { font-size: 1.2rem; margin: 4px 0 8px; color: var(--muted); font-weight: 600; }
@@ -57,9 +73,12 @@
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 16px;
-      background: #fff;
+      background: #fff0;
+      backdrop-filter: saturate(1.2);
       margin-bottom: 12px;
+      transition: transform 160ms ease, box-shadow 160ms ease;
     }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,0.12); }
     .project-title { font-weight: 700; font-size: 1.05rem; }
     .meta { color: var(--muted); font-size: 0.95rem; }
     .link {
@@ -86,9 +105,15 @@
     .btn {
       background: var(--primary); color: #fff; border: none; border-radius: 10px;
       padding: 10px 14px; font-weight: 600; cursor: pointer;
+      transition: filter 120ms ease, transform 120ms ease;
     }
     .btn.secondary { background: #111827; }
-    .btn:hover { opacity: 0.92; }
+    .btn:hover { filter: brightness(1.05); transform: translateY(-1px); }
+    .btn.link { background: transparent; color: var(--accent); border: 1px solid var(--border); }
+    .badge {
+      display: inline-block; padding: 6px 10px; border-radius: 999px;
+      background: rgba(35,57,93,0.08); color: var(--primary); font-weight: 600; font-size: 0.85rem;
+    }
     @media (max-width: 640px) {
       header { grid-template-columns: 80px 1fr; }
       .avatar { width: 80px; height: 80px; }
@@ -117,6 +142,8 @@
         <div class="actions">
           <a class="btn" href="https://github.com/dcsproducer25-collab/MatrixApp" target="_blank">✍️📲 MatrixApp (novo repositório)</a>
           <button class="btn secondary" onclick="window.print()">Salvar como PDF</button>
+          <button class="btn link" onclick="copyLink()">📎 Copiar link do portfólio</button>
+          <a class="btn" href="PDF/Dinoel_da_Costa_Soares_Curriculo.pdf" download>⬇️ Baixar currículo (PDF)</a>
         </div>
       </div>
     </header>
@@ -125,14 +152,12 @@
       <div class="section-title">Projetos</div>
       <div class="grid-2">
         <div class="card">
-          <div class="project-title">Sistema de Controle de Vendas</div>
-          <div class="meta">Tecnologias: Python, MySQL</div>
+          <div class="project-title">Sistema de Controle de Vendas <span class="badge">Python + MySQL</span></div>
           <div class="meta">Objetivo: Automatizar processos internos de vendas</div>
           <a class="link" href="https://github.com/dcsproducer25-collab/MatrixApp" target="_blank">Ver repositório</a>
         </div>
         <div class="card">
-          <div class="project-title">Aplicativo de Segurança do Trabalho</div>
-          <div class="meta">Tecnologias: Kotlin, Android Studio</div>
+          <div class="project-title">Aplicativo de Segurança do Trabalho <span class="badge">Kotlin + Android</span></div>
           <div class="meta">Objetivo: Checklist de EPIs e alertas de risco</div>
           <div class="meta">Status: Em desenvolvimento</div>
         </div>
@@ -144,7 +169,8 @@
       <div class="card">
         <ul>
           <li><strong>Engenharia de Software – Estácio de Sá (em andamento)</strong><br>
-          <small>Disciplinas: Estrutura de Dados, Engenharia de Requisitos, Testes de Software</small></li>
+            <small>Disciplinas: Estrutura de Dados, Engenharia de Requisitos, Testes de Software</small>
+          </li>
           <li><strong>Técnico em Contabilidade – Escola Estadual Julia Gonçalves Passarinho (1997)</strong></li>
           <li><strong>Cursos Complementares</strong>
             <ul>
@@ -159,4 +185,70 @@
     </section>
 
     <section>
-      <div class="
+      <div class="section-title">Experiência Profissional</div>
+      <div class="card">
+        <ul>
+          <li><strong>Coplan Indústria Ltda. – Técnico em Segurança do Trabalho (2016)</strong><br>
+            Controle de EPIs, inspeções técnicas, aplicação de normas regulamentadoras e treinamentos de integração.
+          </li>
+          <li><strong>Supermercado Econômico e Superlativo Heureca – Prevenção de Perdas / Vendas (2004–2016)</strong><br>
+            Gestão de equipe, atendimento ao cliente, consultoria de vendas e implantação de estratégias de redução de perdas.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Habilidades técnicas</div>
+      <div class="card">
+        <table>
+          <tr>
+            <th>Categoria</th><th>Ferramentas / Tecnologias</th>
+          </tr>
+          <tr>
+            <td>Linguagens</td><td>Python, JavaScript, Java, Kotlin</td>
+          </tr>
+          <tr>
+            <td>Banco de Dados</td><td>MySQL, SQLite</td>
+          </tr>
+          <tr>
+            <td>Desenvolvimento Web</td><td>HTML, CSS, React (básico)</td>
+          </tr>
+          <tr>
+            <td>Metodologias Ágeis</td><td>Scrum, Kanban</td>
+          </tr>
+          <tr>
+            <td>Soft Skills</td><td>Liderança, comunicação, estratégia</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Contato</div>
+      <div class="card">
+        <ul class="contact-list">
+          <li>📧 <a href="mailto:dinocsoares@hotmail.com">dinocsoares@hotmail.com</a></li>
+          <li>📱 (67) 99261-0049</li>
+          <li><a href="https://www.linkedin.com/in/dinoel-costa-33031637?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">LinkedIn</a></li>
+          <li><a href="https://github.com/dinoeldacostasoares" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      Última atualização: <span id="updated"></span>
+    </footer>
+  </div>
+
+  <script>
+    function copyLink() {
+      const link = "https://dinoeldacostasoares.github.io";
+      navigator.clipboard.writeText(link).then(() => alert("Link copiado com sucesso!"));
+    }
+    const d = new Date();
+    const fmt = d.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+    document.getElementById('updated').textContent = fmt;
+  </script>
+</body>
+</html>
