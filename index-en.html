@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dinoel da Costa Soares – Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Dinoel da Costa Soares — Software Engineering, projects, skills and contact.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #23395d;
+      --accent: #3b82f6;
+      --border: #e5e7eb;
+    }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 32px 16px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    }
+    header {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .avatar {
+      width: 120px; height: 120px; border-radius: 50%;
+      border: 3px solid var(--primary); object-fit: cover;
+    }
+    h1 { font-size: 1.8rem; margin: 0; color: var(--primary); }
+    h2 { font-size: 1.2rem; margin: 4px 0 8px; color: var(--muted); font-weight: 600; }
+    .summary { margin-top: 8px; color: var(--text); }
+    .section-title {
+      font-size: 1.3rem; color: var(--primary); margin: 24px 0 12px; font-weight: 700;
+    }
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      background: #fff;
+      margin-bottom: 12px;
+    }
+    .actions {
+      display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px;
+    }
+    .btn {
+      background: var(--primary); color: #fff; border: none; border-radius: 10px;
+      padding: 10px 14px; font-weight: 600; cursor: pointer;
+    }
+    .btn.secondary { background: #111827; }
+    .btn:hover { opacity: 0.92; }
+    .contact-list { list-style: none; padding: 0; margin: 0; }
+    .contact-list li { margin-bottom: 8px; }
+    .contact-list a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    footer { margin-top: 24px; color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="assets/avatar.jpg" alt="Photo of Dinoel" class="avatar">
+      <div>
+        <h1>Dinoel da Costa Soares</h1>
+        <h2>Software Engineering Student</h2>
+        <p class="summary">
+          Professional with over 12 years of experience in sales management, loss prevention and operational control.
+          Currently pursuing a degree in Software Engineering, adding technological and multidisciplinary vision to technical work,
+          with focus on innovation, automation and continuous improvement.
+        </p>
+        <div class="actions">
+          <a class="btn" href="https://github.com/dcsproducer25-collab/MatrixApp" target="_blank">✍️📲 MatrixApp (new repository)</a>
+          <button class="btn secondary" onclick="window.print()">Save as PDF</button>
+          <a class="btn" href="index.html">🇧🇷 Portuguese version</a>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="section-title">Projects</div>
+      <div class="card">
+        <div class="project-title">Sales Control System</div>
+        <div class="meta">Technologies: Python, MySQL</div>
+        <div class="meta">Goal: Automate internal sales processes</div>
+        <a class="link" href="https://github.com/dcsproducer25-collab/MatrixApp" target="_blank">View repository</a>
+      </div>
+      <div class="card">
+        <div class="project-title">Occupational Safety App</div>
+        <div class="meta">Technologies: Kotlin, Android Studio</div>
+        <div class="meta">Goal: PPE checklist and risk alerts</div>
+        <div class="meta">Status: In development</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Education</div>
+      <div class="card">
+        <ul>
+          <li><strong>Software Engineering – Estácio de Sá (ongoing)</strong><br>
+          <small>Subjects: Data Structures, Requirements Engineering, Software Testing</small></li>
+          <li><strong>Accounting Technician – Julia Gonçalves Passarinho State School (1997)</strong></li>
+          <li><strong>Complementary Courses</strong>
+            <ul>
+              <li>Sales Strategy (2022)</li>
+              <li>Remote Work Management (2020)</li>
+              <li>Windows 7 to 11 – SESI (2012)</li>
+              <li>Occupational Safety: PPRA, PCMSO, PCMAT, CIPA, OS</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Professional Experience</div>
+      <div class="card">
+        <ul>
+          <li><strong>Coplan Indústria Ltda. – Occupational Safety Technician (2016)</strong><br>
+          PPE control, technical inspections, regulatory standards application and integration training.</li>
+          <li><strong>Supermercado Econômico & Superlativo Heureca – Loss Prevention / Sales (2004–2016)</strong><br>
+          Team management, customer service, sales consulting and implementation of loss reduction strategies.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Technical Skills</div>
+      <div class="card">
+        <table>
+          <tr><th>Category</th><th>Tools / Technologies</th></tr>
+          <tr><td>Languages</td><td>Python, JavaScript, Java, Kotlin</td></tr>
+          <tr><td>Databases</td><td>MySQL, SQLite</td></tr>
+          <tr><td>Web Development</td><td>HTML, CSS, React (basic)</td></tr>
+          <tr><td>Agile Methods</td><td>Scrum, Kanban</td></tr>
+          <tr><td>Soft Skills</td><td>Leadership, Communication, Strategy</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Contact</div>
+      <div class="card">
+        <ul class="contact-list">
+          <li>📧 <a href="mailto:dinocsoares@hotmail.com">dinocsoares@hotmail.com</a></li>
+          <li>📱 (67) 99261-0049</li>
+          <li><a href="https://www.linkedin.com/in/dinoel-costa-33031637?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">LinkedIn</a></li>
+          <li><a href="https://github.com/dinoeldacostasoares" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      Last update: <span id="updated"></span>
+    </footer>
+  </div>
+
+  <script>
+    const d = new Date();
+    const fmt = d.toLocaleDateString('en-US', { day: '2-digit', month: '2-digit', year: 'numeric' });
+    document.getElementById('updated').textContent = fmt;
+  </script>
+</
