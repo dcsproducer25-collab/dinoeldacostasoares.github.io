@@ -1,9 +1,8 @@
-`html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Dinoel da Costa Soares - Portfólio</title>
+  <title>Dinoel da Costa Soares – Portfólio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Portfólio de Dinoel da Costa Soares — Engenharia de Software, projetos, habilidades e contato.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -81,8 +80,6 @@
     .contact-list li { margin-bottom: 8px; }
     .contact-list a { color: var(--accent); text-decoration: none; font-weight: 600; }
     footer { margin-top: 24px; color: var(--muted); font-size: 0.9rem; }
-
-    / Botões /
     .actions {
       display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px;
     }
@@ -92,15 +89,11 @@
     }
     .btn.secondary { background: #111827; }
     .btn:hover { opacity: 0.92; }
-
-    / Responsivo /
     @media (max-width: 640px) {
       header { grid-template-columns: 80px 1fr; }
       .avatar { width: 80px; height: 80px; }
       .grid-2 { grid-template-columns: 1fr; }
     }
-
-    / Estilo para impressão (PDF) /
     @media print {
       body { background: #fff; padding: 0; }
       .container { box-shadow: none; border: none; border-radius: 0; }
@@ -112,13 +105,14 @@
 <body>
   <div class="container">
     <header>
-      <img src="https://github.com/dinoeldacostasoares.png" alt="Avatar" class="avatar">
+      <img src="assets/avatar.jpg" alt="Foto de Dinoel" class="avatar">
       <div>
         <h1>Dinoel da Costa Soares</h1>
         <h2>Estudante de Engenharia de Software</h2>
         <p class="summary">
-          Apaixonado por tecnologia, desenvolvimento de sistemas e soluções digitais. Busco aplicar meus conhecimentos
-          para criar ferramentas úteis, seguras e eficientes.
+          Profissional com mais de 12 anos de experiência em gestão de vendas, prevenção de perdas e controle operacional.
+          Atualmente graduando em Engenharia de Software, agregando visão tecnológica e multidisciplinar à atuação técnica,
+          com foco em inovação, automação e melhoria contínua.
         </p>
         <div class="actions">
           <a class="btn" href="https://github.com/dcsproducer25-collab/MatrixApp" target="_blank">✍️📲 MatrixApp (novo repositório)</a>
@@ -149,16 +143,15 @@
       <div class="section-title">Formação</div>
       <div class="card">
         <ul>
-          <li>
-            <strong>Engenharia de Software – Estácio de Sá (Último semestre)</strong><br>
-            <small>Principais disciplinas: Estrutura de dados, engenharia de requisitos, testes de software</small>
-          </li>
-          <li>
-            <strong>Cursos Complementares</strong>
+          <li><strong>Engenharia de Software – Estácio de Sá (em andamento)</strong><br>
+          <small>Disciplinas: Estrutura de Dados, Engenharia de Requisitos, Testes de Software</small></li>
+          <li><strong>Técnico em Contabilidade – Escola Estadual Julia Gonçalves Passarinho (1997)</strong></li>
+          <li><strong>Cursos Complementares</strong>
             <ul>
               <li>Estratégia em Vendas (2022)</li>
-              <li>Home Office (2020)</li>
+              <li>Home Office e Gestão Remota (2020)</li>
               <li>Windows 7 a 11 – SESI (2012)</li>
+              <li>PPRA, PCMSO, PCMAT, CIPA, OS (Segurança do Trabalho)</li>
             </ul>
           </li>
         </ul>
@@ -166,54 +159,4 @@
     </section>
 
     <section>
-      <div class="section-title">Habilidades técnicas</div>
-      <div class="card">
-        <table>
-          <tr>
-            <th>Categoria</th><th>Ferramentas / Tecnologias</th>
-          </tr>
-          <tr>
-            <td>Linguagens</td><td>Python, JavaScript, Java, Kotlin</td>
-          </tr>
-          <tr>
-            <td>Banco de Dados</td><td>MySQL, SQLite</td>
-          </tr>
-          <tr>
-            <td>Desenvolvimento Web</td><td>HTML, CSS, React (básico)</td>
-          </tr>
-          <tr>
-            <td>Metodologias Ágeis</td><td>Scrum, Kanban</td>
-          </tr>
-          <tr>
-            <td>Soft Skills</td><td>Liderança, comunicação, estratégia</td>
-          </tr>
-        </table>
-      </div>
-    </section>
-
-<section>
-  <div class="section-title">Contato</div>
-  <div class="card">
-    <ul class="contact-list">
-      <li>📧 <a href="mailto:dinocsoares@hotmail.com">dinocsoares@hotmail.com</a></li>
-      <li>📱 (67) 99261-0049</li>
-      <li><a href="https://www.linkedin.com/in/dinoel-costa-33031637?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">LinkedIn</a></li>
-      <li><a href="https://github.com/dinoeldacostasoares" target="_blank">GitHub</a></li>
-    </ul>
-  </div>
-</section>
-
-    <footer>
-      Última atualização: <span id="updated"></span>
-    </footer>
-  </div>
-
-  <script>
-    // Atualiza data automaticamente
-    const d = new Date();
-    const fmt = d.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
-    document.getElementById('updated').textContent = fmt;
-  </script>
-</body>
-</html>
-`
+      <div class="
