@@ -4,7 +4,7 @@ Este repositório apresenta o portfólio online de Dinoel da Costa Soares, estud
 
 🔗 Links principais
 
-Portfólio online: https://dcsproducer25-collab.github.io
+Portfólio online: https://dcsproducer25-collab.github.io/dinoeldacostasoares.github.io/
 
 Protótipo visual do MatrixApp: https://matrixapp-lovable.web.app
 
@@ -46,7 +46,7 @@ O botão "Salvar como PDF" utiliza window.print() com suporte a @media print.
 
 O botão "Baixar currículo" requer que o arquivo PDF esteja corretamente hospedado na pasta /PDF.
 
-O botão "Copiar link do portfólio" foi ajustado para copiar o link correto: https://dcsproducer25-collab.github.io
+O botão "Copiar link do portfólio" foi ajustado para copiar o link correto: https://dcsproducer25-collab.github.io/dinoeldacostasoares.github.io/
 
 🔒 Licença e proteção de código
 
@@ -62,8 +62,8 @@ Evitar exposição de arquivos sensíveis
 
 Email: dinocsoares@hotmail.com
 
-LinkedIn: linkedin.com/in/dinoel-costa-33031637
+LinkedIn: https://www.linkedin.com/in/dinoel-costa-33031637?utm_source=share_via&utm_content=profile&utm_medium=member_android
 
-GitHub: github.com/dcsproducer25-collab
+GitHub: https://github.com/dcsproducer25-collab
 
 Última atualização: 27/01/2026
